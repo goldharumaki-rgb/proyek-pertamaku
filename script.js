@@ -1,8 +1,9 @@
-var tombol = document.getElementById("hitung");
+var skills = ["HTML", "CSS", "JavaScript", "Git", "GitHub"];
 
-tombol.onclick = function() {
-  var angka1 = Number(document.getElementById("angka1").value);
-  var angka2 = Number(document.getElementById("angka2").value);
-  var total = angka1 + angka2;
-  document.getElementById("hasil").textContent = "Hasil: " + total;
-};
+var daftar = document.getElementById("daftar-skills");
+
+for (var i = 0; i < skills.length; i++) {
+  var item = document.createElement("li");
+  item.textContent = skills[i];
+  daftar.appendChild(item);
+}
